@@ -11,7 +11,7 @@ This is a very classic big data project structure. Following is my experience an
 - Real-time: Kafka, Spark, Mysql, Spring MVC.
 - Off-line: Hbase, Hive, Hue
 
-<h1>🍻Product Show</h1>
+🍻Product Show
 
 **<h2>Data Set</h2>**  
 This data set contains 12 columns attributes for each soccer athlete from different countries:  
