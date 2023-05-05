@@ -31,16 +31,16 @@ First Step, we use the original way to implement the map-reduce in java file, an
 This round is **Count the players of each country:**
 <img align="center" alt="img" src="https://github.com/XingyuHuang23/Real-time-Big-Data-Analysis-System-for-the-FIFA-World-Cup/blob/main/imgs/2.png" width="100%" height="auto"/>
 
-Run jar file on hadoop, result looks good:
-<img align="left" alt="img" src="https://github.com/XingyuHuang23/Real-time-Big-Data-Analysis-System-for-the-FIFA-World-Cup/blob/main/imgs/3.png" width="auto" height="auto"/>
+Run jar file on hadoop, result looks good, format: Country - Player Numbers
+<img align="center" alt="img" src="https://github.com/XingyuHuang23/Real-time-Big-Data-Analysis-System-for-the-FIFA-World-Cup/blob/main/imgs/3.png" width="auto" height="auto"/>
 
 Second round is **Find the best overall player of each country:**, For this round we used secondary sorting which means we will order data set before reducing to improve the speed of analysis. To attain this goal we need customize more java files.
 
-<img align="left" alt="img" src="https://github.com/XingyuHuang23/Real-time-Big-Data-Analysis-System-for-the-FIFA-World-Cup/blob/main/imgs/4.png" width="auto" height="auto"/>
+<img align="center" alt="img" src="https://github.com/XingyuHuang23/Real-time-Big-Data-Analysis-System-for-the-FIFA-World-Cup/blob/main/imgs/4.png" width="auto" height="auto"/>
 
 Following the result, format: Country - player - power.
 
-<img align="left" alt="img" src="https://github.com/XingyuHuang23/Real-time-Big-Data-Analysis-System-for-the-FIFA-World-Cup/blob/main/imgs/5.png" width="auto" height="auto"/>
+<img align="center" alt="img" src="https://github.com/XingyuHuang23/Real-time-Big-Data-Analysis-System-for-the-FIFA-World-Cup/blob/main/imgs/5.png" width="auto" height="auto"/>
 
 Besides the test above,I have 3 more map-reduce tests, details please see my project folder.
 
