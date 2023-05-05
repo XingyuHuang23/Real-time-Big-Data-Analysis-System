@@ -19,4 +19,4 @@ This data set contains 12 columns attributes for each soccer athlete from differ
 uid,name,age,height_cm,weight_kg,nationality,overall,team_position,pace,shooting, defending,physic  
 We can use those data to do analysis by different dimensions. Let's Map-Reduce! 
 
-<img align="left" alt="img" src="https://github.com/XingyuHuang23/Real-time-Big-Data-Analysis-System-for-the-FIFA-World-Cup/blob/main/imgs/1.png" width="50%" height="auto" border-radius="10px" />
+<img align="left" alt="img" src="https://github.com/XingyuHuang23/Real-time-Big-Data-Analysis-System-for-the-FIFA-World-Cup/blob/main/imgs/1.png" width="auto" height="auto"/>
