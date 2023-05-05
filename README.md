@@ -16,7 +16,7 @@ This is a very classic big data project structure. Following is my experience an
 **Data Set**
 This data set contains 12 columns attributes for each soccer athlete from different countries:  
 
-uid,name,age,height_cm,weight_kg,nationality,overall,team_position,pace,shooting, defending,physic  
+uid, name,age, height_cm, weight_kg, nationality, overall, team_position, pace, shooting, defending, physic  
 
 We can use those data to do analysis by different dimensions. Let's Map-Reduce! 
 
