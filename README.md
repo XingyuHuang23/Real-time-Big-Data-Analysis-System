@@ -12,3 +12,12 @@ This is a very classic big data project structure. Following is my experience an
 - Off-line: Hbase, Hive, Hue
 
 🍻Product Show
+
+**<h2>Data Set</h2>**  
+This data set contains 12 columns attributes for each soccer athlete from different countries:  
+
+uid, name,age, height_cm, weight_kg, nationality, overall, team_position, pace, shooting, defending, physic  
+
+We can use those data to do analysis by different dimensions. Let's Map-Reduce! 
+
+<img align="left" alt="img" src="https://github.com/XingyuHuang23/Real-time-Big-Data-Analysis-System-for-the-FIFA-World-Cup/blob/main/imgs/1.png" width="auto" height="auto"/>
