@@ -8,8 +8,8 @@ This is a very classic big data project structure. Following is my experience an
 
 ✨Tech Environment：  
 - Cluster: Hadoop, Zookeeper, Flume
-- Real-time: Kafka, Spark, Mysql, Spring MVC
-- Off-line: Hbase, Hive, Hue
+- Real-time: Kafka, Spark Streaming, Mysql, Spring MVC
+- Off-line: Hbase, Hive, Hue, Spark Sql
 - Tools: VMware, SecureCRT
 
 🍻Product Show
@@ -166,3 +166,47 @@ Hue also connected with the mysql and zookeeper, we could check their status ver
 The tools used for offline data: Flume, Kafka, Spark Streaming, Mysql  
 Structure Flow:  
 <img align="center" alt="img" src="https://github.com/XingyuHuang23/Real-time-Big-Data-Analysis-System-for-the-FIFA-World-Cup/blob/main/imgs/21.png" width="auto" height="auto"/> 
+
+Used the same data set to do the real time analysis.  
+
+Flume: Collect the data from log file and push data to kafka.
+
+Kafka: As the message queue to transfer data flow, flume as the provider, spark as the consumer 
+
+Spark Streaming: Live map-reduce analyse for data streaming and push data to mysql for storing.  
+
+Mysql: Stored the real time changed data for later use.  
+
+For this structure, I also set 3 nodes to implement data transfer.  
+
+Hp1 (master): Flume, Kafka, Mysql
+Hp2 (data collect): Flume, Jar
+Localhost (real time analyse): Spark streaming.    
+
+Note: We could set the spark streaming part on the hp2 node and used spark shell to background
+running, the reason I set the spark streaming on localhost now is just for presenting code and
+effect easily.
+
+**Operation process:**  
+1. start the kafka cluster (hp1,hp2,hp3):  
+  bin/kafka-server-start.sh config/server.properties  
+
+       Note: we should create the topics “worldcup” and register in zookeeper before starting the kafka cluster.   
+
+2. start the flume nodes (hp1,hp2): ./start.sh  
+
+3. Start the data collect jar(hp2): ./wp.shell  
+
+4. start the spark streaming ( localhost || hp2 ):  
+<img align="center" alt="img" src="https://github.com/XingyuHuang23/Real-time-Big-Data-Analysis-System-for-the-FIFA-World-Cup/blob/main/imgs/22.png" width="auto" height="auto"/> 
+
+5. Check the streaming in mysql:  
+<img align="center" alt="img" src="https://github.com/XingyuHuang23/Real-time-Big-Data-Analysis-System-for-the-FIFA-World-Cup/blob/main/imgs/23.png" width="auto" height="auto"/> 
+
+Spark Streaming will continuously push the real-time analysis data result in mysql by 3S a round
+
+**Guides:**  
+
+https://spark.apache.org/docs/latest/structured-streaming-programming-guide.html  
+
+https://spark.apache.org/docs/latest/structured-streaming-kafka-integration.html
